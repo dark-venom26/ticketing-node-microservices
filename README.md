@@ -12,6 +12,8 @@ This is a node.js microservices project for ticketing application
 
 ## Installation
 
+
+
 ### Install Docker
 
 
@@ -24,6 +26,7 @@ Refer this doc - https://docs.docker.com/engine/install/ubuntu/
 Refer this doc - https://docs.docker.com/desktop/install/windows-install/
 
 ### Install Kubernetes
+
 
 #### For Ubuntu (linux)
 You need to install minikube
@@ -80,16 +83,34 @@ Go to the project directory
   cd ticketing-node-microservices
 ```
 
-Install Docker 
+### Point your `localhost` url to `ticketing.dev`
+
+#### Windows
+Go to `c:\windows\system32\drivers\etc\hosts`
+
+Add this line
+```bash
+127.0.0.1 ticketing.dev
+```
+
+#### Linux
+Run this cmd
 
 ```bash
-  npm install
+minikube ip
+```
+
+Open `/etc/hosts` file with code
+
+Add this line
+```bash
+YOUR_MINIKUBE_IP ticketing.dev
 ```
 
 Start the server
 
 ```bash
-  npm run start
+  skaffold dev
 ```
 
 
