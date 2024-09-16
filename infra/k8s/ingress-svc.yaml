@@ -31,3 +31,10 @@ spec:
                 name: orders-svc
                 port:
                   number: 3000
+          - path: /api/payments/?(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: payments-svc
+                port:
+                  number: 3000
