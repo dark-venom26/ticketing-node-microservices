@@ -63,12 +63,15 @@ Refer this doc - https://skaffold.dev/docs/install/
 
 To run this project, you will need to add the following environment variables to your kubernetes cluster
 
+Run this command
+
 `JWT_KEY`
 
-Run this command
 ```bash
-kubectl create secret generic jwt-secret --from-literal=JWT_KEY=here-your-jwt-key
+kubectl create secret generic jwt-secret --from-literal JWT_KEY=here-your-jwt-key
 ```
+
+`STRIPE_KEY`
 
 ```bash
 kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=here-your-secret-key
