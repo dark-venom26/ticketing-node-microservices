@@ -67,7 +67,8 @@ To run this project, you will need to add the following environment variables to
 
 Run this command
 ```bash
-kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=here-your-jwt-key
+kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=here-your-secret-key
 ```
 ## Run Locally
 
