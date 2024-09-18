@@ -18,6 +18,10 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
+  if (!mongoose.connection.db) {
+    throw new Error('MongoDB connection is not established');
+  }
+
   const collections = await mongoose.connection.db.collections();
 
   for (let collection of collections) {
