@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: amanvish/auth
+          image: darkvenom26/auth
           env:
             - name: JWT_KEY
               valueFrom:
